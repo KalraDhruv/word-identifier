@@ -39,5 +39,7 @@ class Softmax:
        :param y_hat: vector consisting of softmax results
        :return: gradients
        """
-       raise NotImplementedError
-       
+       # After the derivation the gradient comes out to be y_hat - y(One-Hot Encoding)
+
+       y_hat[y] = y_hat[y]-1
+       return y_hat
